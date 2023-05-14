@@ -58,6 +58,8 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemGroupedBackground
 
+        view.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+
         view.addSubview(control)
         view.addSubview(dissmissButton)
 
@@ -76,7 +78,7 @@ class SecondViewController: UIViewController {
         control.center.x = view.center.x
 
         dissmissButton.frame = .init(x: 0, y: view.layoutMargins.top, width: 28, height: 28)
-        dissmissButton.center.x = view.frame.width - view.layoutMargins.right
+        dissmissButton.center.x = view.frame.width - dissmissButton.frame.width/2 - view.layoutMargins.right
         dissmissButton.center.y = control.center.y
     }
 
